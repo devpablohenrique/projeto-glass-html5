@@ -48,6 +48,7 @@ Com base nesta estrutura, oque iremos alterar logo de cara são as tag's
   - Section (Seção)
   - Aside
   - Footer
+- Configuração de estilo - CSS utilizado na pagina principal
 
 ---
 # Projeto - MOC
@@ -239,3 +240,256 @@ Aqui o codigo utilizado;
         <p>Copyright &copy; 2013 - by Gustavo Guanabara <br>
             <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>
     </footer>
+    
+# Configuração de Estilo
+    
+CSS3 utilizado na configuração da pagina principal -HOME-.
+    
+    @charset "UTF-8";                                       -- Configuração para que o navegador saiba os caracteres que vão ser                          utilizados
+    
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');    
+    @font-face {
+        font-family: 'FonteLogo';
+        src: url("../_fonts/bubblegum-sans-regular.otf");
+    }                                                       -- Importações de fontes
+    
+    p {
+        font-family: Arial, Helvetica, sans-serif;          --Definição da familia da fonte
+        text-align: justify;                                -- Configura o texto justificado
+        text-indent: 50px;                                  -- Cria um espaço de 50px no inicio do Paragrafo
+    }
+    
+    a {
+        color: #606060;                                     -- Define a cor da fonte para todos os links
+        text-decoration: none;                              -- Remove o sublinhado de todos os links
+    }
+    
+    a:hover {
+        text-decoration: underline;                         -- Ao passar o mouse em cima do link, sera adicionado o sublinhado.
+    }
+    
+    body {
+        background-color: #dddddd;                          -- Cor de fundo para o body
+        color: rgb(0, 0, 0);                                -- As letras por padrão terão a cor preta
+    }
+    
+    div#interface {
+        width: 90%;                                         -- Largura de 90% do tamanho do objeto pai, no caso o body.
+        background-color: #ffffff;                          -- Cor de background
+        margin: -20px auto 0px auto;                        -- Definição da margin sendo, topo -20px direita automatica, baixo 0px e esquerda automatica.
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);        --Sombra para a caixa
+        padding: 10px;                                      -- Preenchimento de 10px
+    }
+    
+    header#cabecalho img#icone {
+        position: absolute;                                 -- Posição absoluta dentro do site, podendo ser configurada dentro do ste livremente, ou dentro do container anterior caso o item pai seja declarado como relative.
+        left: 84%;                                          -- 84% de distacia da borda esquerda
+        top: 70px;                                          -- 70px de distancia da borda superior
+    }
+    
+    header#cabecalho {
+        border-bottom: 1px solid #606060;                   -- Define a borda inferior com 1px de espessura, solida e com a cor.
+        height: 150px;                                      -- Altura de 150px
+        background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; -- Define o backgroud com uma imagem, sem repetição e com largura de 80px
+    }
+    
+    header#cabecalho h1 {
+        font-family: 'FonteLogo', Helvetica, sans-serif;    -- Define a familia da fonte que sera utilizada
+        font-size: 30pt;                                    -- Tamanho da Fonte
+        color: #606060;                                     -- Cor da fonte
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);        -- Sombra para o texto, sendo os parametros, deslocamento horizontal de 1x, deslocamento vertical de 1px, espalhamento de 1px e cor preta com 0.6 de transparencia. 
+        padding: 0px;                                       -- Preenchimento de 0px.
+        margin-bottom: 0px;                                 -- Margem inferior de 0px
+    }
+    
+    header#cabecalho h2 {
+        font-family: 'Titillium Web', sans-serif;           -- Define a familia da fonte a ser utiliziada
+        color: #888888;                                     -- Define a cor da fotne
+        font-size: 15pt;                                    -- Tamanho da fonte
+        padding: 0px;                                       -- Preenchimento de 0px
+        margin-top: 0px;                                    -- Margem de 0px
+    }
+    
+    
+    /* Formatação de imagens com legendas   */
+    
+    figure.foto-legenda {
+        position: relative;                                 -- O componente possui posição realtiva, ele ira se comportar de forma a ficar posicionado aonde ele realmente esta no HTML
+        border: 8px solid white;                            -- Borda de 8px de espessura, solida e branca
+        box-shadow: 1px 1px 4px black;                      -- Sombra da caixa.
+    }
+    
+    figure.foto-legenda img {
+        width: 100%;                                        -- Largura da imagem com 100%
+        height: 100%;                                       -- Altura da imagem com 100%
+    }
+    
+    figure.foto-legenda figcaption {
+        opacity: 0;                                         -- Configura a legenda como invisivel
+        position: absolute;                                 -- Posição absoluta
+        top: 0px;                                           -- 0px de distancia para o topo
+        background-color: rgba(0, 0, 0, 0.4);               -- Transparencia de fundo
+        color: white;                                       -- Cor da fonte
+        width: 100%;                                        -- Largura de 100%
+        height: 100%;                                       -- Altura de 100%
+        padding: 10px;                                      -- Preenchimento de 10px
+        box-sizing: border-box;                             -- Configuração para que o conteudo não sobreponha a borda da caixa
+        transition: opacity 1s;                             -- Configuração da transição
+    }
+    
+    figure.foto-legenda:hover figcaption {
+        opacity: 1;                                         -- Ao passar o mouse em cima, sera ativada a opacidade 1, trasendo assim a visualização da legenda.
+    }
+    
+    
+    /* Formatação do Menu */
+    
+    nav#menu {
+        display: block;                                     -- Transformação do menu em um item de bloco
+    }
+    
+    nav#menu ul {
+        list-style: none;                                   -- Remove o estilo da lista
+        text-transform: uppercase;                          -- Configura todos as letras em MAIUSCULAS
+        position: absolute;                                 -- Posição absoluta
+        top: -20px;                                         -- -20px de distancia do topo
+        right: 100px;                                       -- 100px de distancia da margem direita
+    }
+    
+    nav#menu li {
+        display: inline-block;                              -- Define cada item da lista como um elemento inline-block - elemento inline que contém algumas das propriedades de bloco
+        background-color: #dddddd;                          -- Cor de fundo
+        padding: 10px;                                      -- Prenchimento de 10px
+        margin: 2px;                                        -- 2px de margem
+        transition: background-color 1s;                    -- Configuração da transição
+    }
+    
+    nav#menu li:hover {
+        background-color: #606060;                          -- Ao passar o mouse em cima de cada item da lista/menu, a cor de fundo sera alterada
+    }
+    
+    nav#menu h1 {
+        display: none;                                      -- Remove o item da visualização
+    }
+    
+    nav#menu a {
+        color: black;                                       -- Cor do Texto como preto
+        text-decoration: none;                              -- Remove o sublinhado do item.
+    }
+    
+    nav#menu a:hover {
+        color: white;                                       -- Ao passar o mouse em cima, a cor da letra sera alterada para branco
+        text-decoration: underline;                         -- Ao passar o mouse sera adicionado o sublinhado ao conteúdo.
+    }
+    
+    section#corpo {
+        display: block;                                     -- Configura o item como display block
+        width: 66%;                                         -- Largura de 66%
+        float: left;                                        -- Flutuar a esquerda
+        border-right: 1px solid #606060;                    -- Configura borda lateral direita
+        padding-right: 15px;                                -- Preenchimento a esquerda de 15px
+    }
+    
+    article#noticia-principal h2 {
+        font-size: 13pt;                                    -- Tamanho da fonte para o h2 do artigo
+        color: #606060;                                     -- Configuração da cor da fonte
+        background-color: #dddddd;                          -- Cor de fundo
+        padding: 5px 0px 5px 10px;                          -- Configuração do preenchimento
+        margin: 10px 0px 10px 0px;                          -- Configuração da margem
+    }
+    
+    header#cabecalho-artigo h1 {
+        font-family: 'FonteLogo';                           -- Fonte utilizada 
+        font-size: 20pt;                                    -- Tamanho da fonte para o h1 do artigo
+        color: #606060;                                     -- Configuração da cor da fonte
+        margin-bottom: 0px;                                 -- Configuração da margem
+        margin-top: 0px;                                    -- Configuração da margem
+    }
+    
+    .direita {
+        text-align: right;                                  -- Configuração do alinhamento do texto
+    }
+    
+    header#cabecalho-artigo h2 {
+        font-size: 13pt;                                    -- Tamanho da fonte
+        color: #cecece;                                     -- Configuração da cor da fonte
+        background-color: #ffffff;                          -- Cor de fundo
+        margin: 0px;                                        -- Configuração da margem
+    }
+    
+    header#cabecalho-artigo h3 {
+        font-size: 13px;                                    -- Tamanho da fonte
+        color: #606060;                                     -- Configuração da cor da fonte
+    }
+    
+    table#tabelaspec {
+        border: 1px solid #606060;                          -- Define a configuração para a borda
+        border-spacing: 0px;                                -- Define o distanciamento entre cada celula
+        margin-left: auto;                                  -- Centraliza os itens ao centro
+        margin-right: auto;                                 -- Centraliza os itens ao centro
+    }
+    
+    table#tabelaspec td {
+        border: 1px solid #606060;                          -- Define a configuração para a borda
+        padding: 10px;                                      -- Preenchimento de 10px 
+        text-align: center;                                 -- Alinhamento do Texto ao centro
+        vertical-align: middle;                             -- Alinhamento vertical do item da tabela ao centro
+    }
+    
+    table#tabelaspec td.ce {
+        color: #ffffff;                                     -- Cor da fonte
+        background-color: #606060;                          -- Cor de fundo
+        vertical-align: top;                                -- Alinhamento vertical ao top
+        font-weight: bold;                                  -- Configura o negrito
+    }
+    
+    table#tabelaspec td.cd {
+        background-color: #cecece;                          -- Cor de fundo
+    }
+    
+    table#tabelaspec caption {
+        color: #888888;                                     -- Cor da fonte
+        font-size: 13pt;                                    -- Tamanho da fonte
+        font-weight: bolder;                                -- Configura o negrito
+    }
+    
+    table#tabelaspec caption span {
+        display: block;                                     -- Configura o display em bloco
+        float: right;                                       -- Flutuar a direita
+        color: black;                                       -- Cor da fonte
+        font-size: 8pt;                                     -- Tamanho da fotne
+        margin-top: 8px;                                    -- Margem superior de 8px
+    }
+    
+    aside#lateral {
+        display: block;                                     -- Display em bloco
+        width: 30%;                                         -- Largura de 30px
+        float: right;                                       -- Flutuar a direita
+        background-color: #dddddd;                          -- Cor de fundo
+        padding: 10px;                                      -- Preenchimento de 10px
+        margin-top: 10px;                                   -- Margem top de 10px
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);         -- Sombra da caixa
+    }
+    
+    aside#lateral h1 {
+        font-family: 'FonteLogo', sans-serif;               -- Familia da fonte
+        font-size: 20pt;                                    -- Tamanho da fonte
+        color: #606060;                                     -- Cor da fonte
+        margin-top: 0px;                                    -- Margem superior de 0px
+    }
+    
+    aside#lateral h2 {
+        background-color: #606060;                          -- Cor de fundo
+        font-size: 13pt;                                    -- Tamanho da fonte
+        color: white;                                       -- Cor da Fonte
+        padding: 5px;                                       -- Preenchimento de 5px
+    }
+    
+    footer#rodape {
+        clear: both;                                        -- Remove as orientações de flutuação para o item em questão
+        border-top: 1px solid #606060;                      -- Borda superior
+    }
+    
+    footer#rodape p {
+        text-align: center;                                 -- Alinha o texto do paragrafo ao centro
+    }
