@@ -1,18 +1,18 @@
 # Curso de Html5 + CSS3
-_Curso disponibilizado pelo canal Curso em Video no youtube_ 
+_Curso disponibilizado pelo canal Curso em Vídeo no youtube_ 
 Link do curso: https://www.youtube.com/watch?v=epDCjksKMok&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o
 
 # Sobre o projeto
 
-O curso disponibilizado tem como premissa ser de cunho iniciante, apresentando as tecnologias de forma simples e de facil aprendizado.
+O curso disponibilizado tem como premissa ser de cunho iniciante, apresentando as tecnologias de forma simples e de fácil aprendizado.
 
-Sendo dividido em varias areas para o aprendizado, contendo no total 40 Horas, no qual é possivel gerar o certificado caso seja realizado pelo proprio site. 
+Sendo dividido em várias áreas para o aprendizado, contendo no total 40 Horas, no qual é possível gerar o certificado caso seja realizado pelo próprio site. 
 
 https://www.cursoemvideo.com/curso/html5/
 
 # Divisão de conteúdo
 
-Ao iniciarmos o nosso projeto, devemos criar a nossa estrutura basica HTML.
+Ao iniciarmos o nosso projeto, devemos criar a nossa estrutura básica HTML.
 
     <!DOCTYPE html>
     <html lang="en">
@@ -29,49 +29,51 @@ Ao iniciarmos o nosso projeto, devemos criar a nossa estrutura basica HTML.
 
 Com base nesta estrutura basica podemos criar o nosso projeto.
 
->Nota: Caso esteja utilizando o VSCode como editor para a criação do projeto, a estrutura basica pode ser criada apertando a tecla "! + Enter".
+>Nota: Caso esteja utilizando o VSCode como editor para a criação do projeto, a estrutura básica pode ser criada apertando a tecla "! + Enter".
 
-Com base nesta estrutura, oque iremos alterar logo de cara são as tag's 
+Com base nesta estrutura, o que iremos alterar logo de cara são as tag's 
 - < html lang="en"> => para => < html lang="pt-br">
-        Com isto dizemos para o navegador que o conteudo do site esta em portugues - brasileiro.
+        Com isto dizemos para o navegador que o conteúdo do site está em português - brasileiro.
 
 - <title>Document</title> => para => <title>Tudo sobre Google Glass</title>
-    Definimos agora o nome que sera apresentado no Titulo do Site.
+    Definimos agora o nome que será apresentado no Título do Site.
  
-# Indice
+# Índice
 
 #### Projeto
 - MOC - Projeto desenhado do site
 #### HTML
-- Separação do conteúdo utilizando as Tag's semanticas
+- Separação do conteúdo utilizando as Tag's semânticas
   - Header (Cabeçalho)
   - Section (Seção)
   - Aside
   - Footer
-- Configuração de estilo - CSS utilizado na pagina principal
+- Configuração de estilo - CSS utilizado na página principal
 
 ---
 # Projeto - MOC
 
-Para o desenvolvimento do projeto, foi antes desenhado o Wireframe no site => https://mockflow.com/
+Para o desenvolvimento do projeto, foi antes desenhado o Wire frame no site => https://mockflow.com/
 
 Segue a imagem abaixo;
 
-[IMAGEM AQUI]
+![MOC1](https://user-images.githubusercontent.com/37333531/160950358-f5fe5390-09fb-40cf-8cf5-bd0357c2542a.jpg)
+![MOC2](https://user-images.githubusercontent.com/37333531/160950361-4295f3f2-74df-4a19-85d4-ca6bd7dcc447.jpg)
 
-Com o Wireframe do Projeto conseguimos criar a estrutura de caixa (box-model) em que sera dividida o nosso layout.
+
+Com o Wire frame do Projeto conseguimos criar a estrutura de caixa (box-model) em que será dividida o nosso layout.
 
 # HTML
 
-    Antes de começarmos a separação semantica do site, ele foi envolto em uma DIV geral no qual colocamos o ID de "interface" que logo mais sera configurada o estilo geral do site posteriormente
+    Antes de começarmos a separação semântica do site, ele foi envolto em uma DIV geral no qual colocamos o ID de "interface" que logo mais será configurada o estilo geral do site posteriormente
     
 ### HEADER
 
 Resultado visual final;
 
-[IMAGEM AQUI]
+![HEADER](https://user-images.githubusercontent.com/37333531/160951319-74af11f5-f969-41f2-8b05-b2b57fd45f01.jpg)
 
-Abaixo o codigo desenvolvido para a configuração do cabeçalho do site, 
+Abaixo o código desenvolvido para a configuração do cabeçalho do site, 
 
     <header id="cabecalho"> 
         <hgroup>
@@ -79,7 +81,7 @@ Abaixo o codigo desenvolvido para a configuração do cabeçalho do site,
             <h2>A revolução do Google está chegando</h2>
         </hgroup>
     
-        <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Icone oculos pequeno">
+        <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Ícone óculos pequeno">
     
         <nav id="menu">
             <h1>Menu Principal</h1>
@@ -93,27 +95,28 @@ Abaixo o codigo desenvolvido para a configuração do cabeçalho do site,
         </nav>
     </header>
 
-- No inicio do codigo apresentado, temos a declaração da nossa tag < header>, aonde foi definido que seria o nosso cabeçalho, nela temos configurado o #id "cabecalho".
+- No início do código apresentado, temos a declaração da nossa tag < header>, aonde foi definido que seria o nosso cabeçalho, nela temos configurado o #id "cabecalho".
 - Logo abaixo, temos um agrupamento de cabeçalhos, definido pela tag < hgroup>.
-  - Dentro do grupo de cabeçalhos, temos dois cabeçalhos definidos um < h1>(Titulo) e um < h2>(Subtitulo).
-- Foi configurado abaixo do < hgroup> a declaração da tag < img> que é utilizada para realizar a declaração de imagens, configuramos também o id="icone" que sera utilizado no momento da formatação por CSS, ela é responsavel para adicionar a imagem abaixo.
-[IMAGEM AQUI]
-- Temos agora o nosso menu que utilizamos a estrutura semanantica < nav>, utilizada para a criação da navegação do nosso site.
-  - Configuramos um titulo < h1> para o menu.
-  - Configuramos também a estrutura de listas do HTML com seu < ul>(Lista) e < li>(Itens da lista).
-     - Para os itens da lista foram configuradas algumas funções JavaScript, que são responsaveis pela alteração da foto quando se passa o mouse por cima de qualquer um dos itens, caso não tenha visto, da um pulinho nas paginas e teste rsrs.
-     - Cada item da lista também possui um link < a>, que é responsavel pelo direcionamento e navegação para as outras paginas do site.
-  > Nota: Verificando posteriormente em outros sites e cursos, a estutrutura de criação de barras de navegação por ul's e li's é amplamente utilizada.
+  - Dentro do grupo de cabeçalhos, temos dois cabeçalhos definidos um < h1>(Titulo) e um < h2> (Titulo secundário).
+- Foi configurado abaixo do < hgroup> a declaração da tag < img> que é utilizada para realizar a declaração de imagens, configuramos também o id="icone" que será utilizado no momento da formatação por CSS, ela é responsável para adicionar a imagem abaixo.
+- Temos agora o nosso menu que utilizamos a estrutura semântica < nav>, utilizada para a criação da navegação do nosso site.
+  - Configuramos um título < h1> para o menu.
+  - Configuramos também a estrutura de listas do HTML com seu < ul>(Lista) e < li> (Itens da lista).
+     - Para os itens da lista foram configuradas algumas funções JavaScript, que são responsáveis pela alteração da foto quando se passa o mouse por cima de qualquer um dos itens, caso não tenha visto, dá um pulinho nas páginas e teste rsrs.
+     - Cada item da lista também possui um link < a>, que é responsável pelo direcionamento e navegação para as outras páginas do site.
+  > Nota: Verificando posteriormente em outros sites e cursos, a estrutura de criação de barras de navegação por ul's e li's é amplamente utilizada.
     
-    [IMAGEM AQUI]
 
 ## SECTION
 
- Foi utilizado para o exercicio a criação de uma seção, segue a imagem dela no site final.
+ Foi utilizado para o exercício a criação de uma seção, segue a imagem dela no site final.
  
- [IMAGEM AQUI]
+![SECTION1](https://user-images.githubusercontent.com/37333531/160951577-37d177c4-ed28-4d2c-9392-ca1314e26c6b.jpg)
+![SECTION2](https://user-images.githubusercontent.com/37333531/160951584-72899321-9421-4f9e-8bbd-90441adae9ae.jpg)
+![SECTION3](https://user-images.githubusercontent.com/37333531/160951611-4a1f4a1d-9fe7-46f9-ad56-fa868e8aa89d.jpg)
+
  
-Segue o codigo HTML.
+Segue o código HTML.
 
     <section id="corpo">
                 <article id="noticia-principal">
@@ -128,7 +131,7 @@ Segue o codigo HTML.
     
                     <h2>O que é </h2>
                     <p> O <span style="font-weight: 900;">Google Glass</span> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="http://google.com" target="_blank">Project Glass</a>,
-                        o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em>                    encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+                        o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar videoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em>                    encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes antifurto e de desbloqueio de tela para o acessório. </p>
     
                     <figure class="foto-legenda">
                         <img src="_imagens/glass-quadro-homem-mulher.jpg" alt="">
@@ -139,7 +142,7 @@ Segue o codigo HTML.
                     </figure>
     
                     <h2>Data de lançamento</h2>
-                    <p> Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
+                    <p> Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014. </p>
     
                     <h2>Especificações Técnicas</h2>
                     <table id="tabelaspec">
@@ -187,28 +190,28 @@ Segue o codigo HTML.
             </section>
             
 -   Para a seção criamos apenas um artigo, no qual contém o nosso conteúdo principal.
--   Dentro do nosso article, temos uma Tag já utilizada que é a Tag Header, utilizamos ela para criar um segundo cabeçalho dentro da nossa pagina.
+-   Dentro do nosso article, temos uma Tag já utilizada que é a Tag Header, utilizamos ela para criar um segundo cabeçalho dentro da nossa página.
 -   Novas Tag's - p - span - em
-    -   A tag ( p) é utilizada para a criação de paragrafos.
+    -   A tag ( p) é utilizada para a criação de parágrafos.
     -  (span) Utilizado para a seleção de uma parte especifica na qual deseja realizar a formatação, seja ela inline aplicada diretamente na tag, ou posteriormente via CSS utilizando classes, Ids, Tagname... etc.  
-    -  (em) Serve para darmos enfase, visualmente possui efeito de italico. 
+    -  (em) Serve para darmos ênfase, visualmente possui efeito de itálico. 
     > O elemento <em> é frequentemente usado para indicar um contraste implícito ou explícito.
 -   Novas Tag's - Figure - figcaption
-    - A Tag (figure) é utilizada para que possamor criar a legenda de uma imagem de forma semantica, para que os navegadores consigam identificar que aquela legenda é referenciada para aquela imagem.
-    - Figcaption contém o oque vai ser a legenda da imagem.
+    - A Tag (figure) é utilizada para que possamos criar a legenda de uma imagem de forma semântica, para que os navegadores consigam identificar que aquela legenda é referenciada para aquela imagem.
+    - Figcaption contém o que vai ser a legenda da imagem.
 - Novas Tag - video - source
-  - A tag video ela serve para anexarmos um video em nossa pagina.
-  - (source) Com ela conseguimos direcionar o video (neste caso, pois pode ser utilizada em imagens também) de forma a conseguirmos configurar mais de uma fonte de video, utilizado para quando se trabalha com varios navegadores e algum deles não lide muito bem com um tipo de dado.
+  - A tag video ela serve para anexarmos um vídeo em nossa página.
+  - (source) Com ela conseguimos direcionar o vídeo (neste caso, pois pode ser utilizada em imagens também) de forma a conseguirmos configurar mais de uma fonte de vídeo, utilizado para quando se trabalha com vários navegadores e algum deles não lide muito bem com um tipo de dado.
 > Nota importante
-> Com base no redimencionamento do nosso video, uma dica importante foi para utilziarmos ela dentro de uma DIV especifica para o video, para que possamos trabalhar a estilização da DIV para conseguirmos deixar o video responsivo.
+> Com base no redimensionamento do nosso vídeo, uma dica importante foi para utilizarmos ela dentro de uma DIV especifica para o vídeo, para que possamos trabalhar a estilização da DIV para conseguirmos deixar o vídeo responsivo.
 
 ## Aside
 
 Criação do nosso conteúdo lateral.
 
-[IMAGEM AQUI]
+![ASIDE](https://user-images.githubusercontent.com/37333531/160951716-02ae99dc-dd8b-44a8-bb67-9bf281814f20.jpg)
 
-Aqui o codigo utilizado;
+Aqui o código utilizado;
 
     <aside id="lateral">
         <h1>Outras Notícias</h1>
@@ -222,7 +225,7 @@ Aqui o codigo utilizado;
 
         <h2>Novidades no Glass</h2>
         <p> O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será
-            transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
+            transmitido para o ouvido do usuário por meio de micro vibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante. </p>
         <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância
             do espectador.
         </p>
@@ -232,9 +235,9 @@ Aqui o codigo utilizado;
 
 Criação do nosso rodapé.
 
-[IMAGEM AQUI]
+![FOOTER](https://user-images.githubusercontent.com/37333531/160951785-5440b05e-22a9-418c-baba-b4765d8da43c.jpg)
 
-Aqui o codigo utilizado;
+Aqui o código utilizado;
 
     <footer id="rodape">
         <p>Copyright &copy; 2013 - by Gustavo Guanabara <br>
@@ -254,9 +257,9 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }                                                       -- Importações de fontes
     
     p {
-        font-family: Arial, Helvetica, sans-serif;          --Definição da familia da fonte
+        font-family: Arial, Helvetica, sans-serif;          --Definição da família da fonte
         text-align: justify;                                -- Configura o texto justificado
-        text-indent: 50px;                                  -- Cria um espaço de 50px no inicio do Paragrafo
+        text-indent: 50px;                                  -- Cria um espaço de 50px no início do Paragrafo
     }
     
     a {
@@ -265,7 +268,7 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     a:hover {
-        text-decoration: underline;                         -- Ao passar o mouse em cima do link, sera adicionado o sublinhado.
+        text-decoration: underline;                         -- Ao passar o mouse em cima do link, será adicionado o sublinhado.
     }
     
     body {
@@ -283,8 +286,8 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     
     header#cabecalho img#icone {
         position: absolute;                                 -- Posição absoluta dentro do site, podendo ser configurada dentro do ste livremente, ou dentro do container anterior caso o item pai seja declarado como relative.
-        left: 84%;                                          -- 84% de distacia da borda esquerda
-        top: 70px;                                          -- 70px de distancia da borda superior
+        left: 84%;                                          -- 84% de distância da borda esquerda
+        top: 70px;                                          -- 70px de distância da borda superior
     }
     
     header#cabecalho {
@@ -294,7 +297,7 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     header#cabecalho h1 {
-        font-family: 'FonteLogo', Helvetica, sans-serif;    -- Define a familia da fonte que sera utilizada
+        font-family: 'FonteLogo', Helvetica, sans-serif;    -- Define a família da fonte que será utilizada
         font-size: 30pt;                                    -- Tamanho da Fonte
         color: #606060;                                     -- Cor da fonte
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);        -- Sombra para o texto, sendo os parametros, deslocamento horizontal de 1x, deslocamento vertical de 1px, espalhamento de 1px e cor preta com 0.6 de transparencia. 
@@ -303,8 +306,8 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     header#cabecalho h2 {
-        font-family: 'Titillium Web', sans-serif;           -- Define a familia da fonte a ser utiliziada
-        color: #888888;                                     -- Define a cor da fotne
+        font-family: 'Titillium Web', sans-serif;           -- Define a família da fonte a ser utilizada
+        color: #888888;                                     -- Define a cor da fonte
         font-size: 15pt;                                    -- Tamanho da fonte
         padding: 0px;                                       -- Preenchimento de 0px
         margin-top: 0px;                                    -- Margem de 0px
@@ -314,7 +317,7 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     /* Formatação de imagens com legendas   */
     
     figure.foto-legenda {
-        position: relative;                                 -- O componente possui posição realtiva, ele ira se comportar de forma a ficar posicionado aonde ele realmente esta no HTML
+        position: relative;                                 -- O componente possui posição relativa, ele irá se comportar de forma a ficar posicionado aonde ele realmente está no HTML
         border: 8px solid white;                            -- Borda de 8px de espessura, solida e branca
         box-shadow: 1px 1px 4px black;                      -- Sombra da caixa.
     }
@@ -325,20 +328,20 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     figure.foto-legenda figcaption {
-        opacity: 0;                                         -- Configura a legenda como invisivel
+        opacity: 0;                                         -- Configura a legenda como invisível
         position: absolute;                                 -- Posição absoluta
-        top: 0px;                                           -- 0px de distancia para o topo
-        background-color: rgba(0, 0, 0, 0.4);               -- Transparencia de fundo
+        top: 0px;                                           -- 0px de distância para o topo
+        background-color: rgba(0, 0, 0, 0.4);               -- Transparência de fundo
         color: white;                                       -- Cor da fonte
         width: 100%;                                        -- Largura de 100%
         height: 100%;                                       -- Altura de 100%
         padding: 10px;                                      -- Preenchimento de 10px
-        box-sizing: border-box;                             -- Configuração para que o conteudo não sobreponha a borda da caixa
+        box-sizing: border-box;                             -- Configuração para que o conteúdo não sobreponha a borda da caixa
         transition: opacity 1s;                             -- Configuração da transição
     }
     
     figure.foto-legenda:hover figcaption {
-        opacity: 1;                                         -- Ao passar o mouse em cima, sera ativada a opacidade 1, trasendo assim a visualização da legenda.
+        opacity: 1;                                         -- Ao passar o mouse em cima, será ativada a opacidade 1, trazendo assim a visualização da legenda.
     }
     
     
@@ -352,14 +355,14 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
         list-style: none;                                   -- Remove o estilo da lista
         text-transform: uppercase;                          -- Configura todos as letras em MAIUSCULAS
         position: absolute;                                 -- Posição absoluta
-        top: -20px;                                         -- -20px de distancia do topo
-        right: 100px;                                       -- 100px de distancia da margem direita
+        top: -20px;                                         -- -20px de distância do topo
+        right: 100px;                                       -- 100px de distância da margem direita
     }
     
     nav#menu li {
         display: inline-block;                              -- Define cada item da lista como um elemento inline-block - elemento inline que contém algumas das propriedades de bloco
         background-color: #dddddd;                          -- Cor de fundo
-        padding: 10px;                                      -- Prenchimento de 10px
+        padding: 10px;                                      -- Preenchimento de 10px
         margin: 2px;                                        -- 2px de margem
         transition: background-color 1s;                    -- Configuração da transição
     }
@@ -378,8 +381,8 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     nav#menu a:hover {
-        color: white;                                       -- Ao passar o mouse em cima, a cor da letra sera alterada para branco
-        text-decoration: underline;                         -- Ao passar o mouse sera adicionado o sublinhado ao conteúdo.
+        color: white;                                       -- Ao passar o mouse em cima, a cor da letra será alterada para branco
+        text-decoration: underline;                         -- Ao passar o mouse será adicionado o sublinhado ao conteúdo.
     }
     
     section#corpo {
@@ -424,7 +427,7 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     
     table#tabelaspec {
         border: 1px solid #606060;                          -- Define a configuração para a borda
-        border-spacing: 0px;                                -- Define o distanciamento entre cada celula
+        border-spacing: 0px;                                -- Define o distanciamento entre cada célula
         margin-left: auto;                                  -- Centraliza os itens ao centro
         margin-right: auto;                                 -- Centraliza os itens ao centro
     }
@@ -457,7 +460,7 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
         display: block;                                     -- Configura o display em bloco
         float: right;                                       -- Flutuar a direita
         color: black;                                       -- Cor da fonte
-        font-size: 8pt;                                     -- Tamanho da fotne
+        font-size: 8pt;                                     -- Tamanho da fonte
         margin-top: 8px;                                    -- Margem superior de 8px
     }
     
@@ -472,7 +475,7 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     aside#lateral h1 {
-        font-family: 'FonteLogo', sans-serif;               -- Familia da fonte
+        font-family: 'FonteLogo', sans-serif;               -- Família da fonte
         font-size: 20pt;                                    -- Tamanho da fonte
         color: #606060;                                     -- Cor da fonte
         margin-top: 0px;                                    -- Margem superior de 0px
@@ -491,5 +494,5 @@ CSS3 utilizado na configuração da pagina principal -HOME-.
     }
     
     footer#rodape p {
-        text-align: center;                                 -- Alinha o texto do paragrafo ao centro
+        text-align: center;                                 -- Alinha o texto do parágrafo ao centro
     }
