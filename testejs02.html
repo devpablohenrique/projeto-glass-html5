@@ -10,17 +10,17 @@
     <script>
         function acendeLampada() {
             var img = document.querySelector('img#imgLampada');
-            img.src = '_imagens/lampada-acesa.jpg'
+            img.src = 'imagens/lampada-acesa.jpg'
         }
 
         function apagarLampada() {
             var img = document.querySelector('img#imgLampada');
-            img.src = '_imagens/lampada-apagada.jpg'
+            img.src = 'imagens/lampada-apagada.jpg'
         }
 
         function quebrarLampada() {
             var img = document.querySelector('img#imgLampada');
-            img.src = '_imagens/lampada-quebrada.jpg'
+            img.src = 'imagens/lampada-quebrada.jpg'
         }
     </script>
 
@@ -28,7 +28,7 @@
 
 <body>
     <h1>Acenda a lâmpada</h1>
-    <img src="_imagens/lampada-apagada.jpg" alt="" id="imgLampada" onclick="quebrarLampada()" onmouseover="acendeLampada()" onmouseout="apagarLampada()">
+    <img src="imagens/lampada-apagada.jpg" alt="" id="imgLampada" onclick="quebrarLampada()" onmouseover="acendeLampada()" onmouseout="apagarLampada()">
 
 
 </body>

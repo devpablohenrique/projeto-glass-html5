@@ -13,7 +13,7 @@
         function mudaLampada(tipo) {
 
             if (!quebrada) {
-                document.querySelector('img#imgLampada').src = '_imagens/' + tipo + '.jpg'
+                document.querySelector('img#imgLampada').src = 'imagens/' + tipo + '.jpg'
                 if (tipo == 'lampada-quebrada') {
                     quebrada = true
                 }
@@ -26,7 +26,7 @@
 
 <body>
     <h1>Acenda a lâmpada</h1>
-    <img src="_imagens/lampada-apagada.jpg" alt="" id="imgLampada" onclick="mudaLampada('lampada-quebrada')" onmouseover="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')">
+    <img src="imagens/lampada-apagada.jpg" alt="" id="imgLampada" onclick="mudaLampada('lampada-quebrada')" onmouseover="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')">
 
 
 </body>
